@@ -1,0 +1,48 @@
+<!-- <div class = "conatainer">
+    <div class = "row ml-5">
+        <div class = "col-lg-12 col-sm-12 col-xs-12">
+            <h4 class = "mt-4 mb-4">Update Grocery Details by Grocery Name</h4>
+            <form>
+                <fieldset>
+                    <div class = "form-group">
+                        <label for = "groceryName">Grocery Name</label>
+                        <input type = "text" name = "groceryName" id = "groceryName" minlength="3" maxlength="30" pattern="[a-zA-Z]*" #groceryName="ngModel" [(ngModel)]= "grocery.groceryName" class = "form-control" placeholder="Enter the Grocery Name" required>
+                        <div *ngIf="groceryName.errors &&(groceryName.dirty || groceryName.touched)">
+                            <div [hidden]="!groceryName.errors.required">
+                                Please enter the Grocery Name
+                            </div>
+                            <div [hidden]="!groceryName.errors.minlength">
+                                Grocery Name cannot be less than 3 letters
+                            </div>
+                            <div [hidden]="!groceryName.errors.maxlength">
+                                Grocery Name cannot be greater than 30 letters
+                            </div>
+                            <div [hidden]="!groceryName.errors.pattern">
+                                Grocery Name should be of pattern: a-z A-Z
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class = "form-group">
+                        <label for = "groceryQuantity">Grocery Quantity</label>
+                        <input type = "text" name = "groceryQuantity" id = "groceryQuantity" minlength="2" maxlength="30" #groceryQuantity="ngModel" [(ngModel)]= "grocery.groceryQuantity" class = "form-control" placeholder="Enter the Grocery Quantity" required>
+                        <div *ngIf="groceryQuantity.errors &&(groceryQuantity.dirty || groceryQuantity.touched)">
+                            <div [hidden]="!groceryQuantity.errors.required">
+                                Please enter the Grocery Quantity
+                            </div>
+                            <div [hidden]="!groceryQuantity.errors.minlength">
+                                Grocery Name Quantity be less than 2 letters
+                            </div>
+                            <div [hidden]="!groceryQuantity.errors.maxlength">
+                                Grocery Name cannot be greater than 30 letters
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "form-group">
+                        <input class = "btn btn-success" type = "submit" value = "Update Grocery">
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div> -->

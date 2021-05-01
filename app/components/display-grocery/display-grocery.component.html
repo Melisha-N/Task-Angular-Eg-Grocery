@@ -1,0 +1,38 @@
+<div class = "container mt-5 mr-3">
+    <div class = "row ">
+        <div class = "col-lg-9 col-sm-12 col-xs-12"> 
+            <input type="text" placeholder="Enter GroceryName" [(ngModel)] = "searchValue" class = "form-control">
+        </div>
+        <div class = "col-lg-3 col-sm-12 col-xs-12">
+            <button type = "button" class = "btn btn-info"><b>Search</b></button>
+        </div>
+    </div>
+</div>
+<div class = "container mt-5">
+    <div class = "col-lg-12 col-sm-12 col-xs-12">
+        <table class = "table table-striped">
+            <thead>
+                <tr class = "bg-info text-light">
+                    <td>Grocery Category</td>
+                    <td>Grocery Name</td>
+                    <td>Grocery Type</td>
+                    <td>Grocery Quantity</td>
+                    <td>Grocery Ratings</td>
+                    <td>Update</td>
+                    <td>Delete</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr  *ngFor = "let grocery of groceries | searchfilter:searchValue">
+                    <td>{{grocery.groceryCategory}}</td>
+                    <td>{{grocery.groceryName}}</td>
+                    <td>{{grocery.groceryType}}</td>
+                    <td>{{grocery.groceryQuantity}}</td>
+                    <td>{{grocery.groceryRatings}}</td>
+                    <td><button class = "btn btn-success">Update</button></td>
+                    <td><button class = "btn btn-danger" (click)="delGrocery(grocery.groceryName)">Delete</button></td>
+                </tr>
+            </tbody>
+        </table> 
+    </div>
+</div>

@@ -1,0 +1,102 @@
+<div>
+    <h3 class = "text-center">{{message}}</h3>
+</div>
+<div class = "conatainer">
+    <div class = "row ml-5">
+        <div class = "col-lg-12 col-sm-12 col-xs-12">
+            <h4 class = "mt-4 mb-4">Add Grocery Details</h4>
+            <form>
+                <fieldset>
+                    <div class = "form-group">
+                        <label for = "groceryCategory">Grocery Category</label>
+                        <input type = "text" name = "groceryCategory" id = "groceryCategory" minlength="3" maxlength="30" pattern="[a-zA-Z]*" #groceryCategory="ngModel" [(ngModel)]= "grocery.groceryCategory" class = "form-control" placeholder="Enter the Grocery Category" required>
+                        <div *ngIf="groceryCategory.errors &&(groceryCategory.dirty || groceryCategory.touched)">
+                            <div [hidden]="!groceryCategory.errors.required">
+                                Please enter the Grocery Category
+                            </div>
+                            <div [hidden]="!groceryCategory.errors.minlength">
+                                Grocery Category cannot be less than 3 letters
+                            </div>
+                            <div [hidden]="!groceryCategory.errors.maxlength">
+                                Grocery Category cannot be greater than 30 letters
+                            </div>
+                            <div [hidden]="!groceryCategory.errors.pattern">
+                                Grocery Category should be of pattern: a-z A-Z
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "form-group">
+                        <label for = "groceryName">Grocery Name</label>
+                        <input type = "text" name = "groceryName" id = "groceryName" minlength="3" maxlength="30" pattern="[a-zA-Z]*" #groceryName="ngModel" [(ngModel)]= "grocery.groceryName" class = "form-control" placeholder="Enter the Grocery Name" required>
+                        <div *ngIf="groceryName.errors &&(groceryName.dirty || groceryName.touched)">
+                            <div [hidden]="!groceryName.errors.required">
+                                Please enter the Grocery Name
+                            </div>
+                            <div [hidden]="!groceryName.errors.minlength">
+                                Grocery Name cannot be less than 3 letters
+                            </div>
+                            <div [hidden]="!groceryName.errors.maxlength">
+                                Grocery Name cannot be greater than 30 letters
+                            </div>
+                            <div [hidden]="!groceryName.errors.pattern">
+                                Grocery Name should be of pattern: a-z A-Z
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "form-group">
+                        <label for = "groceryType">Grocery Type</label>
+                        <input type = "text" name = "groceryType" id = "groceryType" minlength="3" maxlength="30" pattern="[a-zA-Z]*" #groceryType="ngModel" [(ngModel)]= "grocery.groceryType" class = "form-control" placeholder="Enter the Grocery Type" required>
+                        <div *ngIf="groceryType.errors &&(groceryType.dirty || groceryType.touched)">
+                            <div [hidden]="!groceryType.errors.required">
+                                Please enter the Grocery Type
+                            </div>
+                            <div [hidden]="!groceryType.errors.minlength">
+                                Grocery Type cannot be less than 3 letters
+                            </div>
+                            <div [hidden]="!groceryType.errors.maxlength">
+                                Grocery Type cannot be greater than 30 letters
+                            </div>
+                            <div [hidden]="!groceryType.errors.pattern">
+                                Grocery Type should be of pattern: a-z A-Z
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "form-group">
+                        <label for = "groceryQuantity">Grocery Quantity</label>
+                        <input type = "text" name = "groceryQuantity" id = "groceryQuantity" minlength="2" maxlength="30" #groceryQuantity="ngModel" [(ngModel)]= "grocery.groceryQuantity" class = "form-control" placeholder="Enter the Grocery Quantity" required>
+                        <div *ngIf="groceryQuantity.errors &&(groceryQuantity.dirty || groceryQuantity.touched)">
+                            <div [hidden]="!groceryQuantity.errors.required">
+                                Please enter the Grocery Quantity
+                            </div>
+                            <div [hidden]="!groceryQuantity.errors.minlength">
+                                Grocery Name Quantity be less than 2 letters
+                            </div>
+                            <div [hidden]="!groceryQuantity.errors.maxlength">
+                                Grocery Name cannot be greater than 30 letters
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "form-group">
+                        <label for = "groceryRatings">Grocery Ratings</label>
+                        <input type = "text" name = "groceryRatings" id = "groceryRatings" minlength="1" maxlength="3" #groceryRatings="ngModel" [(ngModel)]= "grocery.groceryRatings" class = "form-control" placeholder="Enter the Grocery Ratings Out  Of 5" required>
+                        <div *ngIf="groceryRatings.errors &&(groceryRatings.dirty || groceryRatings.touched)">
+                            <div [hidden]="!groceryRatings.errors.required">
+                                Please enter the Grocery Ratings
+                            </div>
+                            <div [hidden]="!groceryRatings.errors.minlength">
+                                Grocery Ratings cannot be less than 1 digit
+                            </div>
+                            <div [hidden]="!groceryRatings.errors.maxlength">
+                                Grocery Ratings cannot be greater than 10 letters
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "form-group">
+                        <input class = "btn btn-success" type = "submit" value = "Add Grocery" (click)="addGrocery()">
+                        </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
+
