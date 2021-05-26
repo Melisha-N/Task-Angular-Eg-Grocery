@@ -15,14 +15,7 @@ export class AddGroceryComponent implements OnInit {
 
   ngOnInit(): void {
   }
-    // public Grocery ={
-    //   groceryCategory : '',
-    //   groceryName : '',
-    //   groceryType : '',
-    //   groceryQuantity : '',
-    //   groceryRatings : ''
     
-    // }
   public addGrocery(){
     let resp =  this.groceryService.addGroceryData(this.grocery);
     resp.subscribe(data =>{
@@ -34,13 +27,3 @@ export class AddGroceryComponent implements OnInit {
  }
 
 
-// public Consumer={
-//   username : '',
-//   firstname : '',
-//   lastname : '',
-//   emailid : '',
-//   age : '',
-//   password : ''
-// }
-
-  // public consumer: Consumer = new Consumer("","","",0,"");
